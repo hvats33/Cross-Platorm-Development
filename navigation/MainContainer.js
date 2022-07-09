@@ -8,8 +8,14 @@ import HomeScreen from './screens/HomeScreen';
 import HistoryScreen from './screens/JobHistory';
 import ScheduleScreen from './screens/JobScheduled';
 import ProfileScreen from './screens/Profile';
+import LoginScreen from './screens/LoginScreen';
+import ForgotPass from './screens/forgotPass';
+import SignUp from './screens/signUp';
 
 //Screen names
+const LoginName = "Login";
+const ForgotPassName = "ForgotPassword";
+const SignUpName = "SignUp";
 const homeName = "Home";
 const historyName = "History";
 const scheduleName = "Schedule";
@@ -44,12 +50,14 @@ function MainContainer() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: 'tomato',
+          activeTintColor: '#bedef7',
           inactiveTintColor: 'grey',
           labelStyle: { paddingBottom: 10, fontSize: 10 },
           style: { padding: 10, height: 70}
         }}>
-
+        <Tab.Screen name={LoginName} component={LoginScreen} />
+        <Tab.Screen name={ForgotPassName} component={ForgotPass} />
+        <Tab.Screen name={SignUpName} component={SignUp} />
         <Tab.Screen name={homeName} component={HomeScreen} />
         <Tab.Screen name={historyName} component={HistoryScreen} />
         <Tab.Screen name={scheduleName} component={ScheduleScreen} />
